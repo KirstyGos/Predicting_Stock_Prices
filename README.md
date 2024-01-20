@@ -35,3 +35,12 @@ A common period for RSI is 14, so we'll use that as one setting in our calculati
 We almost have features and targets that are machine-learning ready -- we have features from current price changes (5d_close_pct) and indicators (moving averages and RSI), and we created targets of future price changes (5d_close_future_pct). Now we need to break these up into separate numpy arrays so we can feed them into machine learning algorithms.
 
 Our indicators also cause us to have missing values at the beginning of the DataFrame due to the calculations. We could backfill this data, fill it with a single value, or drop the rows. Dropping the rows is a good choice, so our machine learning algorithms aren't confused by any sort of backfilled or 0-filled data. Pandas has a .dropna() function which we will use to drop any rows with missing values.
+
+
+To activate this environment, use
+#
+#     $ conda activate myenv
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
